@@ -1,0 +1,17 @@
+<%- include("partials/header"); -%>
+
+<h1>Hello</h1>
+
+
+<p><%= laurem1 %></p>
+
+
+<% postArray.forEach(function(ele){ %>
+    <!-- <div class="container"> -->
+        <h1> <%= ele.title %> </h1>
+        <p> <%= ele.content.slice(0,100) + " ..." %> <a href= "/posts/<%=ele.title%>" >  Read more</a> </p>
+    <!-- </div>
+    -->
+<% }) %>
+
+<%- include("partials/footer"); -%>
