@@ -5,7 +5,12 @@ const _ = require("lodash");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-mongoose.connect("mongodb://localhost:27017/blogDB");
+//Environment variabes
+const id = process.env.USER_ID;
+const pw = process.env.PASSWORD;
+const cluster = process.env.CLUSTER_NAME;
+const url ="mongodb+srv://" + id + ":" + pw + "@" + cluster + ".mongodb.net/blogDB"; 
+mongoose.connect(url);
 
 const blogSchema = {
   title: String,
