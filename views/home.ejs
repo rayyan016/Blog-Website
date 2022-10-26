@@ -1,17 +1,20 @@
 <%- include("partials/header"); -%>
 
-<h1>Hello</h1>
+<h1><%= laurem1.title %></h1>
 
 
-<p><%= laurem1 %></p>
+<p><%= laurem1.content %></p>
 
 
 <% postArray.forEach(function(ele){ %>
     <!-- <div class="container"> -->
         <h1> <%= ele.title %> </h1>
-        <p> <%= ele.content.slice(0,100) + " ..." %> <a href= "/posts/<%=ele.title%>" >  Read more</a> </p>
+        <p> <%= ele.content.slice(0,100) + " ..." %> <a class="btn btn-primary buttonRead" href= "/posts/<%=ele._id%>" > Read more</a> <a class=" btn btn-primary buttonDelete" href= "/delete/<%=ele._id%>" >Delete post</a> </p>
     <!-- </div>
     -->
 <% }) %>
+
+<br>
+<a class="btn btn-primary" href="/compose" role="button">Compose New</a>
 
 <%- include("partials/footer"); -%>

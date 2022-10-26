@@ -33,3 +33,18 @@
 	font-size: 12px;
   color: #fff;
 }
+
+.buttonRead:link, .buttonRead:visited,.buttonDelete:link, .buttonDelete:visited {
+    background-color: transparent;
+    color: #000000;
+  }
+  
+  .buttonRead:hover, .buttonRead:active {
+    background-color: #0096c7;
+    color: #ffffff;
+  }
+
+  .buttonDelete:hover, .buttonDelete:active {
+    background-color: #b7094c;
+    color: #ffffff;
+  }
